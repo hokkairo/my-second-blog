@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ブログアプリ</title>
+  <link rel="stylesheet" href="{% static 'css/blogs.css' %}">
+</head>
+
+<body>
+  <article>
+  <h1>{{ blog.title }}</h1>
+  <time datetime="{{ blog.updated_datetime | date:"Y-m-dTH:i"}}">
+    {{ blog.updated_datetime | date:"Y年m月d日" }}
+  </time>
+  <div>
+    <div>
+      {{ blog.text }}
+    </div>
+    <div id="link">
+      <a href="{% url 'blogs:index' %}">トップページに戻る</a>
+    </div>
+  </div>
+  </article>
+</body>
+</html>

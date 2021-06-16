@@ -1,0 +1,7 @@
+djangoblog_venv
+*.pyc
+*~
+/.vscode
+__pycache__
+db.sqlite3
+.DS_Store
